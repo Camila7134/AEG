@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#102b46">
   <meta name="color-scheme" content="light">
-  <title>AEG · Estado presupuestario al 15 de octubre de 2026</title>
+  <title>AEG · Estado presupuestario al 22 de octubre de 2026</title>
   <style>
     :root{
       --navy-950:#0b2238;--navy-900:#102b46;--navy-800:#163b5a;
@@ -188,7 +188,8 @@
     @media(max-width:1050px){.topbar-inner{grid-template-columns:1fr auto}.desktop-nav{display:none}}
     @media(max-width:900px){.topbar-inner{display:flex;min-height:86px}.brand{min-width:0}.logo-frame{width:170px;height:69px}.logo-frame img{width:170px;height:98px;top:-20px}.brand-copy{display:none}.toolbar{top:auto}.section{scroll-margin-top:96px}}
     @media(max-width:620px){.topbar-inner{min-height:82px;padding:7px 14px}.logo-frame{width:154px;height:64px}.logo-frame img{width:154px;height:89px;top:-18px}.app{padding-top:16px}.hero{border-radius:25px}.kpi{border-radius:19px}.analytics-card{border-radius:20px}}
-  </style>
+  .filters{flex-wrap:wrap}.toolbar{grid-template-columns: minmax(180px,1fr) minmax(300px,2fr) 170px}.badge.contra,.badge.na{background:#edf0f5;color:#475b72}.metric strong{overflow-wrap:anywhere}@media(max-width:900px){.toolbar{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
   <header class="topbar">
@@ -202,7 +203,7 @@
         <a class="desk-link" href="#activos" data-section="activos">Proyectos</a>
         <a class="desk-link" href="#finalizados" data-section="finalizados">Finalizados</a>
       </nav>
-      <span class="date-badge">CORTE · 15 OCT 2026</span>
+      <span class="date-badge">CORTE · 22 OCT 2026</span>
     </div>
   </header>
 
@@ -211,7 +212,7 @@
       <div>
         <div class="eyebrow">Control de proyectos</div>
         <h1 id="page-title">Estado presupuestario de proyectos</h1>
-        <p>Consumo acumulado de horas de diseño al 15 de octubre de 2026.</p>
+        <p>Consumo acumulado de horas de diseño al 22 de octubre de 2026.</p>
       </div>
       <div class="hero-note">
         <span>Lectura inmediata</span>
@@ -221,25 +222,20 @@
     </section>
 
     <section class="kpis" aria-label="Indicadores principales">
-      <button class="kpi" type="button" data-jump-filter="all"><div class="kpi-label">Proyectos activos</div><div class="kpi-value" data-count="18">0</div><div class="kpi-foot">Cartera incluida</div></button>
+      <button class="kpi" type="button" data-jump-filter="all"><div class="kpi-label">Proyectos activos</div><div class="kpi-value" data-count="27">0</div><div class="kpi-foot">Cartera incluida</div></button>
       <button class="kpi alert" type="button" data-jump-filter="exceeded"><div class="kpi-label">Excedidos</div><div class="kpi-value" data-count="3">0</div><div class="kpi-foot">Saldo negativo</div></button>
-      <button class="kpi watch" type="button" data-jump-filter="watch"><div class="kpi-label">Próximos al límite</div><div class="kpi-value" data-count="2">0</div><div class="kpi-foot">Consumo entre 80 % y 100 %</div></button>
-      <button class="kpi pending" type="button" data-jump-filter="pending"><div class="kpi-label">Presupuesto pendiente</div><div class="kpi-value" data-count="3">0</div><div class="kpi-foot">Requieren definición</div></button>
+      <button class="kpi watch" type="button" data-jump-filter="watch"><div class="kpi-label">Próximos al límite</div><div class="kpi-value" data-count="3">0</div><div class="kpi-foot">Consumo entre 80 % y 100 %</div></button>
+      <button class="kpi pending" type="button" data-jump-filter="pending"><div class="kpi-label">Presupuesto pendiente</div><div class="kpi-value" data-count="1">0</div><div class="kpi-foot">Requieren definición</div></button>
     </section>
 
     <section class="section" aria-labelledby="visual-title">
       <div class="section-head"><div><div class="section-kicker">Panorama interactivo</div><h2 id="visual-title">Distribución y nivel de consumo</h2></div><span class="section-count">Toca un elemento para consultar</span></div>
       <div class="analytics-grid">
         <article class="analytics-card">
-          <div class="analytics-title"><h3>Estado de la cartera</h3><span>18 activos</span></div>
+          <div class="analytics-title"><h3>Estado de la cartera</h3><span>27 activos</span></div>
           <div class="donut-layout">
-            <div class="donut" role="img" aria-label="3 proyectos excedidos, 2 próximos al límite, 10 con saldo y 3 con presupuesto pendiente"><div class="donut-center"><strong>18</strong><span>activos</span></div></div>
-            <div class="legend">
-              <button class="legend-button" type="button" data-jump-filter="exceeded"><i class="legend-dot dot-red"></i><span>Excedidos</span><strong>3</strong></button>
-              <button class="legend-button" type="button" data-jump-filter="watch"><i class="legend-dot dot-amber"></i><span>≥ 80 %</span><strong>2</strong></button>
-              <button class="legend-button" type="button" data-jump-filter="ok"><i class="legend-dot dot-green"></i><span>Con saldo</span><strong>10</strong></button>
-              <button class="legend-button" type="button" data-jump-filter="pending"><i class="legend-dot dot-gray"></i><span>Sin presupuesto</span><strong>3</strong></button>
-            </div>
+            <div class="donut" role="img" aria-label="3 Excedidos, 3 ≥ 80 %, 12 Con saldo, 1 Por definir, 5 Contra gasto, 3 No aplica" style="background:conic-gradient(#b93248 0% 11.11111111111111%,#b9780f 11.11111111111111% 22.22222222222222%,#178b86 22.22222222222222% 66.66666666666666%,#9aabba 66.66666666666666% 70.37037037037037%,#7b69a8 70.37037037037037% 88.88888888888889%,#54738b 88.88888888888889% 100.0%)"><div class="donut-center"><strong>27</strong><span>activos</span></div></div>
+            <div class="legend"><button class="legend-button" type="button" data-jump-filter="exceeded"><i class="legend-dot" style="background:#b93248"></i><span>Excedidos</span><strong>3</strong></button><button class="legend-button" type="button" data-jump-filter="watch"><i class="legend-dot" style="background:#b9780f"></i><span>≥ 80 %</span><strong>3</strong></button><button class="legend-button" type="button" data-jump-filter="ok"><i class="legend-dot" style="background:#178b86"></i><span>Con saldo</span><strong>12</strong></button><button class="legend-button" type="button" data-jump-filter="pending"><i class="legend-dot" style="background:#9aabba"></i><span>Por definir</span><strong>1</strong></button><button class="legend-button" type="button" data-jump-filter="contra"><i class="legend-dot" style="background:#7b69a8"></i><span>Contra gasto</span><strong>5</strong></button><button class="legend-button" type="button" data-jump-filter="na"><i class="legend-dot" style="background:#54738b"></i><span>No aplica</span><strong>3</strong></button></div>
           </div>
         </article>
         <article class="analytics-card">
@@ -255,7 +251,7 @@
     </section>
 
     <section class="section" id="activos" aria-labelledby="active-title">
-      <div class="section-head"><div><div class="section-kicker">Cartera activa</div><h2 id="active-title">Consulta por proyecto</h2></div><span class="section-count" id="resultCount">18 proyectos</span></div>
+      <div class="section-head"><div><div class="section-kicker">Cartera activa</div><h2 id="active-title">Consulta por proyecto</h2></div><span class="section-count" id="resultCount">27 proyectos</span></div>
       <div class="toolbar" aria-label="Herramientas de consulta">
         <label class="search">
           <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
@@ -266,7 +262,7 @@
           <button class="filter" type="button" data-filter="exceeded" aria-pressed="false">Excedidos</button>
           <button class="filter" type="button" data-filter="watch" aria-pressed="false">≥ 80 %</button>
           <button class="filter" type="button" data-filter="ok" aria-pressed="false">Con saldo</button>
-          <button class="filter" type="button" data-filter="pending" aria-pressed="false">Sin presupuesto</button>
+          <button class="filter" type="button" data-filter="pending" aria-pressed="false">Por definir</button><button class="filter" type="button" data-filter="contra" aria-pressed="false">Contra gasto</button><button class="filter" type="button" data-filter="na" aria-pressed="false">No aplica</button>
         </div>
         <select class="sort-select" id="sortSelect" aria-label="Ordenar proyectos">
           <option value="risk">Mayor consumo</option>
@@ -279,16 +275,17 @@
     </section>
 
     <section class="section" id="finalizados" aria-labelledby="final-title">
-      <div class="section-head"><div><div class="section-kicker">Seguimiento separado</div><h2 id="final-title">Proyectos finalizados con consumo acumulado</h2></div><span class="section-count">4 proyectos</span></div>
+      <div class="section-head"><div><div class="section-kicker">Seguimiento separado</div><h2 id="final-title">Proyectos finalizados con consumo acumulado</h2></div><span class="section-count">8 proyectos</span></div>
       <div class="finalized-wrap">
         <div class="projects" id="finalProjects"></div>
         <div class="compact-note">
           <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5M12 8h.01"></path></svg>
-          <span>Mejoras internas B800 registra 99,0 HH acumuladas, todas correspondientes a diseño.</span>
+          <span>Incluye los cuatro proyectos del reporte anterior y los finalizados con registros de diseño del 16 al 22 de octubre de 2026. Los consumos se recalcularon desde el registro por código.</span>
         </div>
       </div>
     </section>
 
+    <section class="analytics-card"><h3>Criterio de actualización</h3><p>Horas de diseño acumuladas hasta el 22 de octubre de 2026, calculadas desde «Historial HH y visitas» por código. Estados, clientes y presupuestos: «Historial proyectos». Se incluyen los proyectos activos externos; se excluyen los códigos administrativos 00.</p><p><strong>Revisión de datos:</strong> se detectaron referencias desplazadas en las fórmulas del resumen. Este panel utiliza los registros, sin modificar el Excel. Shockwave (40-001) no tiene registros asociados; el reporte anterior indicaba 95,5 HH bajo otro código. Su saldo requiere validar la recodificación.</p></section>
     <div class="actions" aria-label="Acciones del informe">
       <button class="action-btn primary" type="button" id="shareButton">
         <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"></path></svg>
@@ -300,7 +297,7 @@
       </button>
     </div>
 
-    <footer><span>AEG Consultores en Ingeniería S.A.</span><span>Estado acumulado al 15 de octubre de 2026</span></footer>
+    <footer><span>AEG Consultores en Ingeniería S.A.</span><span>Estado acumulado al 22 de octubre de 2026</span></footer>
   </main>
   <nav class="mobile-nav" aria-label="Navegación rápida">
     <a class="nav-link active" href="#panorama" data-section="panorama"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 13h6V4H4zM14 20h6v-9h-6zM4 20h6v-3H4zM14 7h6V4h-6z"></path></svg><span>Resumen</span></a>
@@ -311,17 +308,19 @@
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script>
-    const activeProjects = [{"code":"13-010","name":"Ospay DPS","client":"Gensler","budget":315.0,"used":552.0,"balance":-237.0,"usage":1.7523809523809524,"pending_budget":false},{"code":"05-008","name":"Laboratorio R&D","client":"Terumo BCT","budget":590.0,"used":822.0,"balance":-232.0,"usage":1.3932203389830509,"pending_budget":false},{"code":"09-041","name":"Modificaciones área buses_Wet","client":"Edwards","budget":20.0,"used":21.5,"balance":-1.5,"usage":1.075,"pending_budget":false},{"code":"01-019","name":"Final pack 1 y 3","client":"Abbott","budget":130.0,"used":124.5,"balance":5.5,"usage":0.9576923076923077,"pending_budget":false},{"code":"07-018","name":"ISD","client":"ICU Medical","budget":120.0,"used":102.0,"balance":18.0,"usage":0.85,"pending_budget":false},{"code":"37-004","name":"Inspección y Back office HMS","client":"JCI","budget":100.0,"used":75.5,"balance":24.5,"usage":0.755,"pending_budget":false},{"code":"24-003","name":"Inspecciones MATTHEWS","client":"MATTHEWS","budget":20.0,"used":11.0,"balance":9.0,"usage":0.55,"pending_budget":false},{"code":"29-006","name":"Licitaciones Extraccion Formulaciones","client":"Coopersurgical","budget":45.0,"used":19.0,"balance":26.0,"usage":0.4222222222222222,"pending_budget":false},{"code":"07-019","name":"1135 ACH 17","client":"ICU Medical","budget":40.0,"used":16.0,"balance":24.0,"usage":0.4,"pending_budget":false},{"code":"03-004","name":"Ventilación Hilos","client":"Proquinal","budget":168.0,"used":64.0,"balance":104.0,"usage":0.38095238095238093,"pending_budget":false},{"code":"09-033","name":"Drum Storage - Formaldehido","client":"Edwards","budget":104.0,"used":36.0,"balance":68.0,"usage":0.34615384615384615,"pending_budget":false},{"code":"01-018","name":"Amplaster 3 packing relocation","client":"Abbott","budget":60.0,"used":15.0,"balance":45.0,"usage":0.25,"pending_budget":false},{"code":"39-001","name":"Shockwave","client":"Urbanistas Asociados","budget":1365.0,"used":95.5,"balance":1269.5,"usage":0.06996336996336996,"pending_budget":false},{"code":"34-001","name":"SINART","client":"LICITACIONES","budget":330.0,"used":23.0,"balance":307.0,"usage":0.0696969696969697,"pending_budget":false},{"code":"10-023","name":"Re - Layout Oficinas Microvention","client":"3G office","budget":340.0,"used":8.0,"balance":332.0,"usage":0.023529411764705882,"pending_budget":false},{"code":"10-022","name":"Cuarto de Químicos","client":"3G office","used":30.5,"budget":null,"balance":null,"usage":null,"pending_budget":true},{"code":"11-003","name":"Liceo Mauro Fernandez","client":"Estruconsult","used":0.0,"budget":null,"balance":null,"usage":null,"pending_budget":true},{"code":"37-002","name":"Lavandería HMS","client":"JCI","used":8.0,"budget":null,"balance":null,"usage":null,"pending_budget":true}];
-    const finalProjects = [{"code":"02-011","name":"Bodega de químicos","client":"Microvention","budget":30.0,"used":66.5,"balance":-36.5,"usage":2.216666666666667},{"code":"09-042","name":"Back office fase 7","client":"Edwards","budget":120.0,"used":148.0,"balance":-28.0,"usage":1.2333333333333334},{"code":"29-005","name":"Extraccion Formulaciones","client":"Coopersurgical","budget":112.0,"used":61.0,"balance":51.0,"usage":0.5446428571428571},{"code":"23-005","name":"Mejoras internas B800","client":"INNOVA PARK","budget":null,"used":99.0,"balance":null,"usage":null}];
+    const activeProjects = [{"code": "13-010", "name": "Ospay DPS", "client": "Gensler", "budget": 315, "used": 594.0, "balance": -279.0, "usage": 1.8857142857142857, "pending_budget": false, "mode": ""}, {"code": "05-008", "name": "Laboratorio R&D", "client": "Terumo BCT", "budget": 590, "used": 831.5, "balance": -241.5, "usage": 1.409322033898305, "pending_budget": false, "mode": ""}, {"code": "09-041", "name": "Modificaciones área buses_Wet", "client": "Edwards", "budget": 20, "used": 21.5, "balance": -1.5, "usage": 1.075, "pending_budget": false, "mode": ""}, {"code": "37-004", "name": "Inspección y Back office HMS", "client": "Lucas Ingenieros", "budget": 100, "used": 97.5, "balance": 2.5, "usage": 0.975, "pending_budget": false, "mode": ""}, {"code": "01-019", "name": "Final pack 1 y 3", "client": "Abbott", "budget": 130, "used": 124.5, "balance": 5.5, "usage": 0.9576923076923077, "pending_budget": false, "mode": ""}, {"code": "07-018", "name": "ISD", "client": "ICU Medical", "budget": 120, "used": 102.0, "balance": 18.0, "usage": 0.85, "pending_budget": false, "mode": ""}, {"code": "24-003", "name": "Inspecciones MATTHEWS", "client": "MATTHEWS", "budget": 20, "used": 11.0, "balance": 9.0, "usage": 0.55, "pending_budget": false, "mode": ""}, {"code": "29-006", "name": "Licitaciones Extraccion Formulaciones", "client": "Coopersurgical", "budget": 45, "used": 19.0, "balance": 26.0, "usage": 0.4222222222222222, "pending_budget": false, "mode": ""}, {"code": "07-019", "name": "1135 ACH 17", "client": "ICU Medical", "budget": 40, "used": 16.0, "balance": 24.0, "usage": 0.4, "pending_budget": false, "mode": ""}, {"code": "03-004", "name": "Ventilación Hilos", "client": "Proquinal", "budget": 168, "used": 66.0, "balance": 102.0, "usage": 0.39285714285714285, "pending_budget": false, "mode": ""}, {"code": "09-033", "name": "Drum Storage - Formaldehido", "client": "Edwards", "budget": 104, "used": 36.0, "balance": 68.0, "usage": 0.34615384615384615, "pending_budget": false, "mode": ""}, {"code": "01-018", "name": "Amplaster 3 packing relocation", "client": "Abbott", "budget": 60, "used": 15.0, "balance": 45.0, "usage": 0.25, "pending_budget": false, "mode": ""}, {"code": "43-001", "name": "SINART", "client": "COTISA", "budget": 330, "used": 57.0, "balance": 273.0, "usage": 0.17272727272727273, "pending_budget": false, "mode": ""}, {"code": "10-023", "name": "Re - Layout Oficinas Microvention", "client": "3G office", "budget": 340, "used": 10.0, "balance": 330.0, "usage": 0.029411764705882353, "pending_budget": false, "mode": ""}, {"code": "03-005", "name": "Back office", "client": "Proquinal", "budget": 22, "used": 0.0, "balance": 22.0, "usage": 0.0, "pending_budget": false, "mode": ""}, {"code": "40-001", "name": "Shockwave", "client": "Urbanistas Asociados", "budget": 1365, "used": 0.0, "balance": 1365.0, "usage": 0.0, "pending_budget": false, "mode": ""}, {"code": "41-001", "name": "Hospital Alajuela", "client": "Climatisa", "budget": 2700, "used": 0.0, "balance": 2700.0, "usage": 0.0, "pending_budget": false, "mode": ""}, {"code": "42-001", "name": "Clínica Universal", "client": "Eufonia futuro S.A", "budget": 56, "used": 0.0, "balance": 56.0, "usage": 0.0, "pending_budget": false, "mode": ""}, {"code": "02-016", "name": "Inspecciones cuarto de quimicos", "client": "Microvention", "budget": null, "used": 3.0, "balance": null, "usage": null, "pending_budget": false, "mode": "contra"}, {"code": "09-000", "name": "Construcción", "client": "Edwards", "budget": null, "used": 200.5, "balance": null, "usage": null, "pending_budget": false, "mode": "na"}, {"code": "10-020", "name": "Inspecciones Laboratorio Microbiología CR3", "client": "3G office", "budget": null, "used": 10.0, "balance": null, "usage": null, "pending_budget": false, "mode": "na"}, {"code": "10-022", "name": "Cuarto de Químicos", "client": "3G office", "budget": null, "used": 63.5, "balance": null, "usage": null, "pending_budget": false, "mode": "contra"}, {"code": "11-003", "name": "Liceo Mauro Fernandez", "client": "Estruconsult", "budget": null, "used": 0.0, "balance": null, "usage": null, "pending_budget": true, "mode": ""}, {"code": "13-009", "name": "Inspección Épsilon DPS, CUP & BWI", "client": "Gensler", "budget": null, "used": 46.0, "balance": null, "usage": null, "pending_budget": false, "mode": "contra"}, {"code": "25-006", "name": "INTEL Inspecciones", "client": "IG WES", "budget": null, "used": 0.0, "balance": null, "usage": null, "pending_budget": false, "mode": "contra"}, {"code": "29-000", "name": "Construcción", "client": "Coopersurgical", "budget": null, "used": 8.0, "balance": null, "usage": null, "pending_budget": false, "mode": "na"}, {"code": "38-001", "name": "Lavandería HMS", "client": "E & C", "budget": null, "used": 54.5, "balance": null, "usage": null, "pending_budget": false, "mode": "contra"}];
+    const finalProjects = [{"code": "02-011", "name": "Bodega de químicos", "client": "Microvention", "budget": 30, "used": 66.5, "balance": -36.5, "usage": 2.216666666666667, "pending_budget": false, "mode": ""}, {"code": "02-015", "name": "Nueva extracción / Mezzanine Sur", "client": "Microvention", "budget": 116, "used": 69.0, "balance": 47.0, "usage": 0.5948275862068966, "pending_budget": false, "mode": ""}, {"code": "09-039", "name": "Training Room Wet plant", "client": "Edwards", "budget": 110, "used": 16.0, "balance": 94.0, "usage": 0.14545454545454545, "pending_budget": false, "mode": ""}, {"code": "09-042", "name": "Back office fase 7", "client": "Edwards", "budget": 120, "used": 148.0, "balance": -28.0, "usage": 1.2333333333333334, "pending_budget": false, "mode": ""}, {"code": "23-005", "name": "Mejoras internas B800", "client": "INNOVA PARK", "budget": null, "used": 99.0, "balance": null, "usage": null, "pending_budget": false, "mode": "na"}, {"code": "29-005", "name": "Extraccion Formulaciones", "client": "Coopersurgical", "budget": 112, "used": 61.0, "balance": 51.0, "usage": 0.5446428571428571, "pending_budget": false, "mode": ""}, {"code": "33-001", "name": "EPFlex", "client": "Parque activa", "budget": 398, "used": 479.75, "balance": -81.75, "usage": 1.2054020100502512, "pending_budget": false, "mode": ""}, {"code": "39-001", "name": "Endoscopía HMS", "client": "ADT", "budget": 8, "used": 139.5, "balance": -131.5, "usage": 17.4375, "pending_budget": false, "mode": ""}];
     const fmt = new Intl.NumberFormat('es-CR',{minimumFractionDigits:1,maximumFractionDigits:1});
     const normalize = value => String(value ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
     const esc = value => String(value).replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
-    const statusFor = project => project.pending_budget ? 'pending' : project.usage > 1 ? 'exceeded' : project.usage >= .8 ? 'watch' : 'ok';
-    const statusLabel = status => ({exceeded:'Excedido',watch:'Consumo ≥ 80 %',ok:'Con saldo',pending:'Por definir',finalized:'Finalizado'})[status];
+    const statusFor = project => project.mode ? project.mode : project.pending_budget ? 'pending' : project.usage > 1 ? 'exceeded' : project.usage >= .8 ? 'watch' : 'ok';
+    const statusLabel = status => ({contra:'Contra gasto',na:'No aplica',exceeded:'Excedido',watch:'Consumo ≥ 80 %',ok:'Con saldo',pending:'Por definir',finalized:'Finalizado'})[status];
     const hh = value => value == null ? 'N/A' : `${fmt.format(value)} HH`;
     const percent = value => value == null ? 'N/A' : `${fmt.format(value * 100)} %`;
 
     function readingFor(project,{finalized=false}={}){
+      if(project.code === '40-001') return 'Sin registros asociados al código actual 40-001 en el archivo recibido. El reporte anterior mostraba 95,5 HH bajo otro código; validar la recodificación antes de interpretar el saldo como disponible.';
+      if(project.mode) return `Registra ${hh(project.used)} de diseño. Modalidad: ${project.mode === 'contra' ? 'contra gasto' : 'presupuesto no aplicable'}; no se calcula porcentaje ni saldo presupuestario.`;
       if(project.pending_budget) return `Registra ${hh(project.used)} de diseño y el presupuesto aún está pendiente de definir.`;
       if(finalized && project.balance == null) return `Registra ${hh(project.used)} de diseño acumuladas. Este proyecto no cuenta con un presupuesto de diseño aplicable.`;
       if(finalized && project.balance < 0) return `El proyecto finalizó con un consumo superior al presupuesto por ${hh(Math.abs(project.balance))}.`;
@@ -338,11 +337,11 @@
       const fillClass = usage > 1 ? ' over' : '';
       const balanceClass = project.balance != null && project.balance < 0 ? 'negative' : '';
       const progressClass = usage != null && usage > 1 ? 'negative' : '';
-      const pendingLine = project.pending_budget ? '<div class="pending-line">Presupuesto de diseño pendiente de definir</div>' : '';
+      const pendingLine = project.code === '40-001' ? '<div class="pending-line">Validar recodificación: sin registros asociados al código actual; el reporte anterior mostraba 95,5 HH.</div>' : project.mode ? `<div class="pending-line">${project.mode === 'contra' ? 'Modalidad contra gasto' : 'Presupuesto no aplicable'}</div>` : project.pending_budget ? '<div class="pending-line">Presupuesto de diseño pendiente de definir</div>' : '';
       return `<article class="project-card" data-state="${status}" data-search="${esc(normalize(`${project.name} ${project.client} ${project.code}`))}" data-name="${esc(project.name)}" data-usage="${usage ?? -1}" data-balance="${project.balance ?? -999999}">
         <div class="card-top"><div class="card-title"><h3>${esc(project.name)}</h3><div class="meta">${esc(project.client)} · ${esc(project.code)}</div></div><span class="badge ${status}">${statusLabel(status)}</span></div>
         <div class="metrics">
-          <div class="metric"><span>Presupuesto</span><strong>${project.pending_budget ? 'Pendiente' : hh(project.budget)}</strong></div>
+          <div class="metric"><span>Presupuesto</span><strong>${project.mode ? (project.mode === 'contra' ? 'Contra gasto' : 'No aplica') : project.pending_budget ? 'Pendiente' : hh(project.budget)}</strong></div>
           <div class="metric"><span>Consumo</span><strong>${hh(project.used)}</strong></div>
           <div class="metric"><span>Saldo</span><strong class="${balanceClass}">${hh(project.balance)}</strong></div>
         </div>
@@ -357,7 +356,7 @@
       <div class="priority-number"><strong>${hh(project.balance)}</strong><span>${percent(project.usage)}</span></div>
     </button>`).join('');
 
-    const ranked = activeProjects.filter(project => !project.pending_budget).sort((a,b)=>b.usage-a.usage).slice(0,5);
+    const ranked = activeProjects.filter(project => project.usage != null).sort((a,b)=>b.usage-a.usage).slice(0,5);
     const rankingMax = Math.max(...ranked.map(project=>project.usage));
     document.getElementById('riskRanking').innerHTML = ranked.map((project,index)=>`<button class="rank-row" type="button" data-project-code="${esc(project.code)}" aria-label="Consultar ${esc(project.name)}, ${percent(project.usage)} consumido">
       <span class="rank-index">${index+1}</span>
@@ -430,7 +429,7 @@
     function showToast(message){
       toast.textContent = message;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2600);
     }
-    const summary = 'Estado presupuestario de proyectos AEG al 15 de octubre de 2026: 18 activos; 3 excedidos (Ospay DPS, Laboratorio R&D y Modificaciones área buses_Wet); 2 próximos al límite y 3 con presupuesto pendiente.';
+    const summary = "Estado presupuestario AEG al 22 de octubre de 2026: 27 activos externos; 3 excedidos; 3 próximos al límite; 1 con presupuesto pendiente; 5 contra gasto y 3 con presupuesto no aplicable. Shockwave requiere validar la recodificación.";
     async function shareSummary(){
       try{
         if(navigator.share){await navigator.share({title:'AEG · Estado presupuestario',text:summary});}
